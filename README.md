@@ -8,8 +8,8 @@
 	- Add Data Columns (According to application any type)
 	- Add partition columns (YYYY-DD-MM-HH) all int
 
-## Crreate Firehose	
-- Create Data Firehose Stream (Select Name)
+## Create Firehose	
+- Create Firehose Stream (Select Name)
 	- Source (Direct PUT)
     - Transform source records with AWS Lambda (Add Lambda for transformation)
 	- Convert record format - Enabled (Select DB created in steps above)
@@ -26,4 +26,4 @@
     - Load Partitions ( MSCK REPAIR TABLE 'tableName'; )
     - Query Athena table to see the results
 
-* Edit Sample code to send test put messages to stream according to your DB Table
+### Edit Sample code to send test put messages to stream according to your DB Table

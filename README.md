@@ -22,4 +22,8 @@
 	- S3 buffer conditions (for parquet select maximum values)
 	- S3 compression and encryption (If required select KMS)
 
+## Use Athena to Query this S3 Bucket
+    - Load Partitions ( MSCK REPAIR TABLE 'tableName'; )
+    - Query Athena table to see the results
+
 ## Edit Sample code to send test put messages to stream according to your DB Table

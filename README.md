@@ -5,8 +5,8 @@
 - Create Table in this database (manually)
 	- Add S3 bucket path (s3://***/)
 	- Add Classification as Parquet
-	- Add Data Columns
-	- Add Partiion columns
+	- Add Data Columns (According to application any type)
+	- Add partition columns (YYYY-DD-MM-HH) all int
 
 ## Crreate Firehose	
 - Create Data Firehose Stream (Select Name)
@@ -14,7 +14,7 @@
     - Transform source records with AWS Lambda (Add Lambda for transformation)
 	- Convert record format - Enabled (Select DB created in steps above)
 	- Select Bucket Path same as in Glue (s3://***/)
-		- Select this as S3 Prefix for partitioning 
+		- Select this as S3 Prefix for partitioning --> [AWS Link for study](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html)
 		raw/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:DD}/hour=!{timestamp:HH}/
 		- Select this in error bucket (Mandatory when we give s3 Prefix)
 		error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:DD}/hour=!{timestamp:HH}/

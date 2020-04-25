@@ -26,4 +26,4 @@
     - Load Partitions ( MSCK REPAIR TABLE 'tableName'; )
     - Query Athena table to see the results
 
-### Edit Sample code to send test put messages to stream according to your DB Table
+##### Edit Sample code to send test put messages to stream according to your DB Table
